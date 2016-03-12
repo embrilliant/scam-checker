@@ -32,7 +32,7 @@ function Checker( keywordArr ) {
     };
 }
 
-var scamKeywords = ["wire", "post", "uk", "keys", "id", "country", "mail", "out", "deposit", "transfer", "00", "number", "kitchen", "available", "UK", "family", "honest"];
+var scamKeywords = ["wire", "post", "uk", "keys", "id", "country", "mail", "out", "deposit", "transfer", "00", "number", "kitchen", "available", "UK", "family", "honest", "back"];
 
 var button = document.getElementById("button");
 var resultText = document.getElementById("result");
