@@ -10,21 +10,19 @@ function Checker( keywordArr ) {
         for ( var i = 0; i < keywordArrLength; i++ ) {
             var keyword = keywordArr[i];
             if ( postText.indexOf( keyword ) > -1 ) {
-                postText.replace(keyword, "");
                 keywordCount++;
             }
         }
 
         if ( keywordCount >= keywordArrLength / 4  ) {
             result = "It's a scam.";
-        } else if ( keywordCount == 0 ) {
-            result = "It might not be a scam or it can be a new one. Please do more research.";
         } else if ( keywordCount >= keywordArrLength / 8 ) {
-            result = "It possibly a scam.";
+            result = "It's possibly a scam.";
+        } else {
+            result = "It might not be a scam or it can be a new one. Please do more research.";
         }
 
         console.log(keywordCount);
-
     }
 
     this.getResult = function() {
@@ -32,7 +30,7 @@ function Checker( keywordArr ) {
     };
 }
 
-var scamKeywords = ["wire", "post", "uk", "keys", "id", "country", "mail", "out", "deposit", "transfer", "00", "number", "kitchen", "available", "UK", "family", "honest", "back"];
+var scamKeywords = ["wire", "post", "uk", "keys", "id", "country", "mail", "out", "deposit", "transfer", "00", "number", "large kitchen", "available", "united kingdom", "family", "honest", "back", "job"];
 
 var button = document.getElementById("button");
 var resultText = document.getElementById("result");
